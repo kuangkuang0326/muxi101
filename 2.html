@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .form {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .picture {
+            display: flex;
+        }
+
+        #name-content {
+            width: 300px;
+            height: 30px;
+        }
+
+        .name {
+            display: flex;
+            gap: 16px;
+        }
+
+        .education {
+            display: flex;
+        }
+
+        select {
+            width: 70px;
+            height: 20px;
+            /* appearance: none; */
+        }
+
+
+
+        option {
+
+            text-align: center;
+        }
+
+        /* .option-content { */
+        /* position: relative; */
+
+        /* } */
+
+        #slect-picture {
+            background: url(slect\ picture.png);
+        }
+
+        .sex {
+            display: flex;
+            gap: 16px;
+        }
+
+        .hobby {
+            display: flex;
+            gap: 16px;
+        }
+
+        .text {
+            display: flex;
+            gap: 16px;
+        }
+
+        #text-input {
+            padding: 20px;
+        }
+
+        #submit-input {
+            align-self: center;
+            width: 100px;
+            height: 50px;
+            background-color: #3e639a;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <div class="picture">
+            <div class="picture-title">头像：</div>
+            <div class="picture-content">
+                <input type="file" name="picture">
+            </div>
+        </div>
+        <div class="name">
+            <div class="name-title">昵称：</div>
+            <input type="text" name="name" id="name-content">
+        </div>
+        <div class="education">
+            <div class="education-title">学历：</div>
+            <div class="education-slc">
+                <select>
+                    <option selected>
+                        <!-- <div class="option-content">√</div> -->
+                        大专
+                    </option>
+                    <option>
+                        <!-- <div class="option-content">√</div> -->
+                        本科
+                    </option>
+                    <div id="slect-picture"></div>
+                </select>
+            </div>
+
+        </div>
+        <div class="sex">
+            <div class="sex-title">性别：</div>
+            <div class="sex-content">
+                <input type="radio" name="sex" id="nan"><label for="nan">男</label>
+                <input type="radio" name="sex" id="nv"><label for="nv">女</label>
+            </div>
+        </div>
+        <div class="hobby">
+            <div class="hobby-title">爱好：</div>
+            <div class="hobby-content">
+                <input type="checkbox">电影
+                <input type="checkbox">摄影
+                <input type="checkbox">音乐
+                <input type="checkbox">阅读
+            </div>
+        </div>
+        <div class="text">
+            <div class="text-title">签名:</div>
+            <div class="text-content">
+                <textarea rows="5" cols="40" id="text-input"></textarea>
+            </div>
+        </div>
+        <div class="submit">
+            <input type="submit" value="提交" id="submit-input">
+        </div>
+
+    </div>
+</body>
+
+</html>
