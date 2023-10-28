@@ -7,18 +7,20 @@
     <title>Document</title>
     <style>
         .container1 {
-            /* display: flex; */
-            /* justify-content: space-between; */
+            width: 100vw;
+            display: flex;
+            justify-content: space-between;
+            flex-basis: auto;
         }
 
         .red1 {
             width: 200px;
             height: 100px;
             background-color: red;
-            float: left;
         }
 
         .yellow1 {
+            flex: 1;
             height: 100px;
             background-color: yellow;
         }
@@ -27,7 +29,6 @@
             width: 200px;
             height: 100px;
             background-color: blue;
-            float: right;
         }
 
         .container2 {
@@ -37,7 +38,7 @@
         }
 
         .red2 {
-
+            flex: 1;
             height: 100px;
             background-color: red;
         }
@@ -49,6 +50,7 @@
         }
 
         .blue2 {
+            flex: 1;
             height: 100px;
             background-color: blue;
         }
@@ -67,5 +69,6 @@
         <div class="blue2"></div>
     </div>
 </body>
+
 
 </html>
