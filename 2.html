@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {
+        /* * {
             margin: 0;
             padding: 0;
-        }
+        } */
 
         .form {
             width: 400px;
@@ -42,6 +42,11 @@
             /* appearance: none; */
         }
 
+        .picture-content,
+        .education-slc {
+            position: relative;
+            left: 17px;
+        }
 
 
         option {
@@ -49,10 +54,10 @@
             text-align: center;
         }
 
-        /* .option-content { */
-        /* position: relative; */
+        /* .option-content {
+        position: relative;
 
-        /* } */
+        } */
 
         #slect-picture {
             background: url(slect\ picture.png);
@@ -75,6 +80,14 @@
 
         #text-input {
             padding: 20px;
+            position: relative;
+            left: 10px;
+            resize: none;
+        }
+
+        .submit {
+            position: relative;
+            left: 60px;
         }
 
         #submit-input {
@@ -83,6 +96,7 @@
             height: 50px;
             background-color: #3e639a;
             color: white;
+            border-radius: 5px;
         }
     </style>
 </head>
