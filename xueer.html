@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        @media screen and (max-width:720px) {
+            .box1-a2 {
+                display: none;
+            }
+        }
+
         .box1 {
             height: 13vh;
             width: 100vw;
@@ -48,23 +54,23 @@
         }
 
         #p1 {
-            line-height: 15vh;
+            line-height: 13vh;
             text-decoration: none;
-            height: 15vh;
+            height: 13vh;
             padding-left: 0%;
-            font-size: 40px;
+            font-size: 37px;
             color: rgb(20, 163, 92);
         }
 
         .box1-a2 {
             margin-left: 15px;
-            height: 15vh;
+            height: 13vh;
         }
 
         #a1 {
             height: 13vh;
             padding: 15px;
-            line-height: 15vh;
+            line-height: 13vh;
             font-size: 25px;
             color: gray;
             text-decoration: none;
@@ -94,6 +100,8 @@
             border: 3px red solid;
             font-size: 20px;
             color: gray;
+            outline: none;
+
         }
 
         #box1-picture2 {
@@ -114,8 +122,8 @@
 
         #box1-picture3 {
             background: url(picture3.png) no-repeat;
-            width: 58px;
-            height: 58px;
+            width: 50px;
+            height: 50px;
             border-radius: 100%;
         }
 
@@ -158,6 +166,13 @@
             z-index: 0;
         }
 
+        .box5 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
         .box2 {
             background: url(picture6.png) no-repeat;
             background-size: 76vw 61vh;
@@ -198,17 +213,18 @@
             border-radius: 100%;
         }
 
+
+
         li {
             font-size: 18px;
             color: black;
         }
 
-        #li2 {
+        .content2 {
             list-style-type: none;
             color: gray;
             font-size: 16px;
-            position: relative;
-            left: 27px;
+
         }
 
         .box3-con3-circle {
@@ -218,20 +234,25 @@
             border-radius: 100%;
             border: #75b475 solid 2px;
             font-size: 30px;
-            line-height: 24px;
+            line-height: 27px;
             text-align: center;
             color: #75b475;
         }
 
-        li:hover,
-        #li2:hover {
-            color: #d79090;
-        }
+
 
         .box4-container1 {
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        li:hover {
+            color: #a54040;
+        }
+
+        li:hover .content2 {
+            color: #a54040;
         }
 
         h2 {
@@ -311,7 +332,7 @@
             justify-content: center;
             align-items: center;
             color: white;
-
+            /* margin-top: 10vh; */
         }
 
         .box5-con-square:hover {
@@ -327,6 +348,15 @@
             margin-top: 0%;
         }
 
+        .box5-container1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            top: -20%;
+
+        }
+
         .box5-con-square::before {
             width: 82px;
             height: 41px;
@@ -336,7 +366,7 @@
             background-color: #ccf5f4;
             /* display: none; */
             /* animation: move 2s; */
-            transition: all 2s;
+            transition: all 1s;
             opacity: 0;
             z-index: -2;
         }
@@ -346,9 +376,7 @@
             /* 这个也可以 */
             /* transform: translate(0, -100%); */
             position: absolute;
-            /* bottom: -124%; */
             top: -41px;
-            /* display: block; */
             opacity: 1;
         }
 
@@ -418,7 +446,7 @@
             </div>
             <div class="box1-input">
                 <div id="input1">
-                    <input type="text" value="请输入..." id="box1-input-content">
+                    <input type="text" placeholder="请输入..." id="box1-input-content">
                     <div id="box1-picture2"></div>
                 </div>
                 <div id="input2">
@@ -443,38 +471,64 @@
                 <div class="box3-con1-circle">专</div>
             </div>
             <div class="box3-container">
-                <div class="ul">
-                    <li>界面与设计应用</li>
-                    <li id="li2">房子</li>
-                    <li>Java程序编程</li>
-                    <li id="li2">赵三金</li>
-                    <li>设计师的自我修养</li>
-                    <li id="li2">分享课程</li>
-                </div>
-                <div class="ul">
-                    <li>计算机基础</li>
-                    <li id="li2">胡薇</li>
-                    <li>植物观赏学基础</li>
-                    <li id="li2">韩一尾</li>
-                    <li>生活常识101</li>
-                    <li id="li2">分享</li>
-                </div>
-                <div class="ul">
-                    <li>新生引导课堂</li>
-                    <li id="li2">升学季</li>
-                    <li>党课精神研讨课</li>
-                    <li id="li2">分享课程</li>
-                    <li>专业方向</li>
-                    <li id="li2">毕业生</li>
-                </div>
-                <div class="ul">
-                    <li>影视广告摄影基础</li>
-                    <li id="li2">分享课程</li>
-                    <li>程序员的养成</li>
-                    <li id="li2">赵多金</li>
-                    <li>如何让设计师改稿</li>
-                    <li id="li2">甲方</li>
-                </div>
+                <ul>
+
+                    <li>
+                        <div>界面设计与运用</div>
+                        <div class="content2">房子</div>
+                    </li>
+                    <li>
+                        <div>Java程序编程</div>
+                        <div class="content2">赵三金</div>
+                    </li>
+
+                    <li>
+                        <div>设计师的自我修养</div>
+                        <div class="content2">分享课程</div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div>计算机基础</div>
+                        <div class="content2">胡薇</div>
+                    </li>
+                    <li>
+                        <div>植物观赏学基础</div>
+                        <div class="content2">韩一尾</div>
+                    </li>
+                    <li>
+                        <div>生活常识101</div>
+                        <div class="content2">分享</div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div>新生引导课堂</div>
+                        <div class="content2">开学季</div>
+                    </li>
+                    <li>
+                        <div>党课精神研讨课</div>
+                        <div class="content2">分享课程</div>
+                    </li>
+                    <li>
+                        <div>专业方向</div>
+                        <div class="content2">毕业生</div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div>影视广告摄影基础</div>
+                        <div class="content2">分享课程</div>
+                    </li>
+                    <li>
+                        <div>程序员的养成</div>
+                        <div class="content2">赵多金</div>
+                    </li>
+                    <li>
+                        <div>如何让设计师改稿</div>
+                        <div class="content2">甲方</div>
+                    </li>
+                </ul>
             </div>
             <div class="box3-container">
                 <div class="box3-con3-circle">+</div>
@@ -529,7 +583,7 @@
             </div>
         </div>
         <div class="box5">
-            <div class="box4-container1">
+            <div class="box5-container1">
                 <h2>猜你喜欢课程</h2>
                 <p id="p2">根据您的浏览记录，推荐相似课程列表</p>
             </div>
